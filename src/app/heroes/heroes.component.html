@@ -1,4 +1,12 @@
-<!-- uppercase pipe to change text format -->
+<!-- uppercase pipe in interpolation to change text format -->
 <h2>{{ hero.name | uppercase }} Details</h2>
 <div><span>id: </span>{{ hero.id }}</div>
 <div><span>name: </span>{{ hero.name }}</div>
+
+<div>
+  <label for="name">Hero name: </label>
+  <input id="name" [(ngModel)]="hero.name" placeholder="name" />
+  <!-- ngModel is angular's two-way binding syntax +
+    name data is coming to the screen from the component and also leaving the screen as user input to the component +
+    it also binds the hero.name property to the HTML so hero.name text box and text box back to hero.name -->
+</div>
